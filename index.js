@@ -113,8 +113,6 @@ function handleEvent (ev) {
 }
 
 window.addEventListener('mousemove', handleEvent, false)
-window.addEventListener('touchmove', handleEvent, false)
-window.addEventListener('touchstart', handleEvent, false)
 
 const projection = new Float32Array(16)
 const view = new Float32Array(16)
