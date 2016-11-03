@@ -1,0 +1,38 @@
+{
+  "name": "makin-art-with-computers",
+  "version": "1.0.0",
+  "description": "Talks and performances about makin' art with computers",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "budo": "^9.2.1",
+    "es2020": "^1.1.9",
+    "gl-mat4": "^1.1.4",
+    "glsl-inverse": "^1.0.0",
+    "glsl-noise": "0.0.0",
+    "glslify": "^6.0.1",
+    "icosphere": "^1.0.0",
+    "regl": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "browserify index.js > bundle.js",
+    "start": "budo index.js:bundle.js --open --live"
+  },
+  "browserify": {
+    "transform": [
+      "glslify",
+      "es2020"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikolalysenko/sf-code-poetics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/sf-code-poetics/issues"
+  },
+  "homepage": "https://github.com/mikolalysenko/sf-code-poetics#readme"
+}
