@@ -8,13 +8,14 @@
     "delaunay-triangulate": "^1.1.6",
     "es2020": "^1.1.9",
     "gl-mat4": "^1.1.4",
+    "google-closure-compiler": "^20161024.1.0",
     "regl": "^1.2.1",
     "vectorize-text": "^3.0.2",
     "voronoi-diagram": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "browserify index.js > bundle.js"
+    "build": "browserify index.js > bundle.full.js && java -jar ./node_modules/google-closure-compiler/compiler.jar --js bundle.full.js --js_output_file bundle.js"
   },
   "browserify": {
     "transform": "es2020"

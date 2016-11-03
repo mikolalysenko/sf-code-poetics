@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "browserify index.js > bundle.js",
+    "build": "browserify index.js > bundle.full.js && java -jar ./node_modules/google-closure-compiler/compiler.jar --js bundle.full.js --js_output_file bundle.js",
     "start": "budo index.js:bundle.js --open --live"
   },
   "browserify": {
